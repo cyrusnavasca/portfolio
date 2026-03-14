@@ -450,6 +450,44 @@ body {
   box-shadow: 0 8px 20px -4px rgba(30, 90, 142, 0.4);
 }
 
+.btn-visit {
+  align-self: flex-start;
+  margin-top: var(--space-md);
+  padding: 0.35rem 0.95rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  gap: 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-50);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.35), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(107, 179, 232, 0.35), transparent 55%),
+    rgba(5, 18, 36, 0.9);
+  border: 1px solid rgba(158, 201, 240, 0.9);
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(12, 35, 64, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+.btn-visit:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(158, 201, 240, 0.9),
+    0 0 18px rgba(107, 179, 232, 0.6);
+}
+
+.btn-visit-label {
+  line-height: 1;
+}
+
+.btn-visit-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
 /* ----- Shared hero-style background for all sections ----- */
 .projects,
 .skills,
