@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyrus Navasca | Data Science Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#hero" class="nav-logo">Cyrus Navasca</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experiences">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="container animate-on-scroll">
+        <div class="hero-content">
+          <p class="hero-label">Hey!👋 My name is</p>
+          <h1 class="hero-title">Cyrus Navasca</h1>
+          <p class="hero-subtitle">I am a <strong>Data Scientist</strong> based in the <strong>Bay Area</strong>. As a recent UC Santa Barbara graduate, I have built <strong>Agentic AI</strong> workflows and <strong>Machine Learning</strong> solutions through industry and research experience.</p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary btn-resume">
+              Download Resume
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+            <div class="hero-social-actions">
+              <a href="https://www.linkedin.com/in/cyrusnavasca/" target="_blank" rel="noopener noreferrer" class="btn-social" aria-label="LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+              </a>
+              <a href="https://github.com/cyrusnavasca" target="_blank" rel="noopener noreferrer" class="btn-social" aria-label="GitHub">
+                <img src="images/github.png" alt="GitHub" class="social-icon">
+              </a>
+              <a href="mailto:cyrus.navasca54@gmail.com" class="btn-social" aria-label="Email">
+                <img src="images/mail_logo.png" alt="Email" class="social-icon">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <img src="images/front_page_pic.JPG" alt="Cyrus Navasca" class="hero-photo">
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card animate-on-scroll">
+            <div class="project-card-image">
+              <img src="images/acuity_temp.png" alt="Acuity.ai ED Risk Assessment dashboard" class="project-img">
+            </div>
+            <div class="project-card-body">
+              <h3>Acuity.ai</h3>
+              <ul class="project-bullets">
+                <li>Developed an AI clinical assistant which helps assess a patient's risk of readmission to the Emergency Department.</li>
+                <li>Leveraged <strong>RAG</strong> to parse medical documents and <strong>ensemble modeling</strong> to generate accurate predictions.</li>
+                <li>Integrated a <strong>chatbot</strong> to provide personalized insights on each assessment and answer follow-up questions.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <div class="project-card-image">
+              <img src="https://picsum.photos/600/320?random=6" alt="Project" class="project-img">
+            </div>
+            <div class="project-card-body">
+              <h3>Detecting Diabetic Retinopathy w/ Computer Vision</h3>
+              <ul class="project-bullets">
+                <li>Architected an end-to-end <strong>deep learning pipeline</strong> using PyTorch to detect diabetic retinopathy from retinal images.</li>
+                <li>Streamlined data management by utilizing <strong>AWS</strong> to store over 3,000 retinal scans.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card animate-on-scroll">
+            <div class="project-card-image">
+              <img src="https://picsum.photos/600/320?random=7" alt="Project" class="project-img">
+            </div>
+            <div class="project-card-body">
+              <h3>Predicting CC Default w/ Neural Networks</h3>
+              <ul class="project-bullets">
+                <li>Constructed a <strong>neural network</strong> to predict credit card default among clients.</li>
+                <li>Achieved 79% accuracy and 0.85 ROC-AUC by applying L2 regularization and SMOTE to address overfitting and class imbalance.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Skills</h2>
+        <h3 class="skills-subheader animate-on-scroll">Languages/Tools</h3>
+        <div class="skills-icons-row animate-on-scroll" aria-label="Skills">
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/python_icon.png" alt="Python" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">Python</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/aws_icon.png" alt="AWS" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">AWS</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/git_icon.png" alt="Git" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">Git</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/github_icon.png" alt="GitHub" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">GitHub</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/sql_icon.png" alt="SQL" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">SQL</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/tableau_icon.png" alt="Tableau" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">Tableau</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/excel_icon.png" alt="Excel" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">Excel</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/R_icon.png" alt="R" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">R</span>
+          </div>
+        </div>
+        <h3 class="skills-subheader animate-on-scroll">Data Science/ML</h3>
+        <div class="skills-icons-row animate-on-scroll" aria-label="Data Science and ML skills">
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/pytorch_icon.png" alt="PyTorch" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">PyTorch</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/langchain_icon.png" alt="LangChain" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">LangChain</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/scikit_icon.png" alt="scikit-learn" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">scikit-learn</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/zenml_icon.png" alt="ZenML" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">ZenML</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/mlflow_icon.png" alt="MLflow" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">MLflow</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/postgres_icon.png" alt="PostgreSQL" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">PostgreSQL</span>
+          </div>
+          <div class="skill-icon-cell">
+            <div class="skill-icon-box">
+              <img src="images/mongodb_icon.png" alt="MongoDB" class="skill-icon-img">
+            </div>
+            <span class="skill-icon-label">MongoDB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiences" class="section experiences">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Experiences</h2>
+        <div class="experiences-list">
+          <article class="experience-card animate-on-scroll">
+            <div class="experience-card-logo" aria-hidden="true">
+              <img src="images/elas_logo.jpg" alt="" class="experience-logo-img">
+            </div>
+            <div class="experience-card-body">
+              <div class="experience-header">
+                <h3>Data Science Intern</h3>
+                <span class="experience-date">June 2025 – Present</span>
+              </div>
+              <p class="experience-company">Elas</p>
+              <p class="experience-desc">Supported analysis and modeling projects; cleaned and validated datasets, built visualizations, and documented findings. Gained hands-on experience with Python, SQL, and collaborative workflows.</p>
+            </div>
+          </article>
+          <article class="experience-card animate-on-scroll">
+            <div class="experience-card-logo" aria-hidden="true">
+              <img src="images/meta_lab_logo.jpg" alt="" class="experience-logo-img">
+            </div>
+            <div class="experience-card-body">
+              <div class="experience-header">
+                <h3>Data Science Research Assistant</h3>
+                <span class="experience-date">Feb 2025 – Nov 2025</span>
+              </div>
+              <p class="experience-company">META Lab</p>
+              <p class="experience-desc">Contribute to ongoing research in statistics or data science; literature review, data collection, and preliminary analysis. Experience with reproducible research and academic writing.</p>
+            </div>
+          </article>
+          <article class="experience-card animate-on-scroll">
+            <div class="experience-card-logo" aria-hidden="true">
+              <img src="images/nexus_logo.png" alt="" class="experience-logo-img">
+            </div>
+            <div class="experience-card-body">
+              <div class="experience-header">
+                <h3>Data Analyst Intern</h3>
+                <span class="experience-date">Oct 2024 – May 2025</span>
+              </div>
+              <p class="experience-company">Daily Nexus</p>
+              <p class="experience-desc">TA or tutor for statistics, math, or data science courses. Helped students with problem sets, office hours, and explaining concepts—strengthening my own communication and technical clarity.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section education">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Education</h2>
+        <div class="education-grid">
+          <div class="education-card animate-on-scroll">
+            <div class="education-card-image">
+              <img src="images/ucsb_logo.png" alt="Campus" class="education-img">
+            </div>
+            <div class="education-card-body">
+              <div class="education-header">
+                <h3>University of California, Santa Barbara (UCSB)</h3>
+                <span class="education-location">Santa Barbara, CA</span>
+              </div>
+              <p class="education-focus">B.S. Statistics & Data Science, Minor in Mathematics</p>
+              <p class="education-desc">Relevant coursework: Advanced Linear Algebra, Statistical Machine Learning, Time Series Analysis, Applied Stochastic Processes, Bayesian Data Analysis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Contact</h2>
+        <p class="contact-text animate-on-scroll">Based in Richmond, CA. Open to internships, research collaboration, and roles in data science and analytics. I'd love to hear from you.</p>
+        <div class="contact-links animate-on-scroll">
+          <a href="mailto:cyrus.navasca54@gmail.com" class="contact-link">Email</a>
+          <a href="https://www.linkedin.com/in/cyrusnavasca/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+          <a href="https://github.com/cyrusnavasca" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Cyrus Navasca. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
