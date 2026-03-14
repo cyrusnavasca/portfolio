@@ -6,7 +6,7 @@
   <title>Cyrus Navasca | Data Science Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -69,7 +69,7 @@
         <div class="projects-grid">
           <article class="project-card animate-on-scroll">
             <div class="project-card-image">
-              <img src="images/acuity_temp.png" alt="Acuity.ai ED Risk Assessment dashboard" class="project-img">
+              <img src="images/acuity_temp.png" alt="Acuity.ai ED Risk Assessment dashboard" class="project-img" loading="lazy">
             </div>
             <div class="project-card-body">
               <h3>Acuity.ai</h3>
@@ -82,7 +82,7 @@
           </article>
           <article class="project-card animate-on-scroll">
             <div class="project-card-image">
-              <img src="https://picsum.photos/600/320?random=6" alt="Project" class="project-img">
+              <img src="https://picsum.photos/600/320?random=6" alt="Project" class="project-img" loading="lazy">
             </div>
             <div class="project-card-body">
               <h3>Detecting Diabetic Retinopathy w/ Computer Vision</h3>
@@ -94,7 +94,7 @@
           </article>
           <article class="project-card animate-on-scroll">
             <div class="project-card-image">
-              <img src="https://picsum.photos/600/320?random=7" alt="Project" class="project-img">
+              <img src="https://picsum.photos/600/320?random=7" alt="Project" class="project-img" loading="lazy">
             </div>
             <div class="project-card-body">
               <h3>Predicting CC Default w/ Neural Networks</h3>
@@ -224,7 +224,11 @@
                 <span class="experience-date">June 2025 – Present</span>
               </div>
               <p class="experience-company">Elas</p>
-              <p class="experience-desc">Supported analysis and modeling projects; cleaned and validated datasets, built visualizations, and documented findings. Gained hands-on experience with Python, SQL, and collaborative workflows.</p>
+              <ul class="project-bullets">
+                <li>Engineered an AI forecasting agent to turn natural language queries to actionable insights leveraging LangChain and ensemble modeling</li>
+                <li>Integrated Vanna AI with PostgreSQL and AWS to enable clients to convert prompts into optimized SQL queries</li>
+                <li>Reduced LLM token costs by 65% and response latency by 90% for an AI data visualization agent by optimizing its data pipeline to extract essential metadata</li>
+              </ul>
             </div>
           </article>
           <article class="experience-card animate-on-scroll">
@@ -237,7 +241,11 @@
                 <span class="experience-date">Feb 2025 – Nov 2025</span>
               </div>
               <p class="experience-company">META Lab</p>
-              <p class="experience-desc">Contribute to ongoing research in statistics or data science; literature review, data collection, and preliminary analysis. Experience with reproducible research and academic writing.</p>
+              <ul class="project-bullets">
+                <li>Developed a natural language processing workflow leveraging Sentence Transformers to generate embeddings, boosting predictive model accuracy by 58%.</li>
+                <li>Constructed a segmentation model by applying PCA and K-means clustering to identify "low-use" and "heavy-use" cannabis users.</li>
+                <li>Spearheaded statistical analysis to uncover relationships among curiosity, creativity, and intervention types using multivariate regression, mediation models, ANCOVA and A/B testing</li>
+              </ul>
             </div>
           </article>
           <article class="experience-card animate-on-scroll">
@@ -250,7 +258,10 @@
                 <span class="experience-date">Oct 2024 – May 2025</span>
               </div>
               <p class="experience-company">Daily Nexus</p>
-              <p class="experience-desc">TA or tutor for statistics, math, or data science courses. Helped students with problem sets, office hours, and explaining concepts—strengthening my own communication and technical clarity.</p>
+              <ul class="project-bullets">
+                <li>Implemented an end-to-end data workflow leveraging Selenium to scrape 3,000+ websites</li>
+                <li>Published an interactive article analyzing trends between Rate My Professors ratings and UCSB grade distributions</li>
+              </ul>
             </div>
           </article>
         </div>

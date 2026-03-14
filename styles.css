@@ -124,14 +124,11 @@ body {
 .experiences .section-title,
 .education .section-title,
 .contact .section-title {
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  color: var(--blue-300);
   background: linear-gradient(135deg, #ffffff 0%, var(--blue-300) 50%, var(--blue-400) 100%);
-  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: 0 0 40px rgba(107, 179, 232, 0.3);
-  animation: section-title-shimmer 8s ease-in-out infinite;
+  -webkit-text-fill-color: transparent;
 }
 
 .projects .section-title::after,
@@ -159,11 +156,6 @@ body {
   transform: translateX(-50%) scaleX(1);
 }
 
-@keyframes section-title-shimmer {
-  0%, 100% { background-position: 0% center; }
-  50% { background-position: 100% center; }
-}
-
 /* ----- Header & Nav ----- */
 .site-header {
   position: fixed;
@@ -171,9 +163,7 @@ body {
   left: 0;
   right: 0;
   height: var(--header-height);
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid rgba(12, 35, 64, 0.06);
   z-index: 100;
   transition: box-shadow var(--duration-normal) var(--ease-out);
@@ -318,13 +308,7 @@ body {
   overflow: hidden;
   border: 4px solid rgba(255, 255, 255, 0.2);
   box-shadow: var(--shadow-lg);
-  transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
   margin: 0 auto;
-}
-
-.hero-photo-wrap:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(107, 179, 232, 0.6), 0 24px 40px -8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-photo {
@@ -477,35 +461,12 @@ body {
               var(--blue-900);
 }
 
-/* ----- Projects: match Skills background and aurora ----- */
+/* ----- Projects ----- */
 section.projects {
   position: relative;
-  overflow: hidden;
   background: radial-gradient(circle at 15% 50%, rgba(61, 143, 209, 0.2), transparent 40%),
               radial-gradient(circle at 85% 30%, rgba(107, 179, 232, 0.2), transparent 40%),
               var(--blue-900);
-}
-
-section.projects::before,
-section.projects::after {
-  content: "";
-  position: absolute;
-  inset: -40% -20%;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(107, 179, 232, 0.18), transparent 45%),
-    radial-gradient(circle at 75% 60%, rgba(61, 143, 209, 0.18), transparent 45%),
-    radial-gradient(circle at 40% 80%, rgba(158, 201, 240, 0.12), transparent 50%);
-  filter: blur(8px);
-  opacity: 0.9;
-  transform: rotate(8deg);
-  animation: skills-aurora 16s var(--ease-in-out) infinite;
-}
-
-section.projects::after {
-  opacity: 0.55;
-  transform: rotate(-10deg);
-  animation-duration: 22s;
 }
 
 section.projects .container {
@@ -513,35 +474,12 @@ section.projects .container {
   z-index: 1;
 }
 
-/* ----- Experiences: same background and aurora as Projects ----- */
+/* ----- Experiences ----- */
 section.experiences {
   position: relative;
-  overflow: hidden;
   background: radial-gradient(circle at 15% 50%, rgba(61, 143, 209, 0.2), transparent 40%),
               radial-gradient(circle at 85% 30%, rgba(107, 179, 232, 0.2), transparent 40%),
               var(--blue-900);
-}
-
-section.experiences::before,
-section.experiences::after {
-  content: "";
-  position: absolute;
-  inset: -40% -20%;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(107, 179, 232, 0.18), transparent 45%),
-    radial-gradient(circle at 75% 60%, rgba(61, 143, 209, 0.18), transparent 45%),
-    radial-gradient(circle at 40% 80%, rgba(158, 201, 240, 0.12), transparent 50%);
-  filter: blur(8px);
-  opacity: 0.9;
-  transform: rotate(8deg);
-  animation: skills-aurora 16s var(--ease-in-out) infinite;
-}
-
-section.experiences::after {
-  opacity: 0.55;
-  transform: rotate(-10deg);
-  animation-duration: 22s;
 }
 
 section.experiences .container {
@@ -573,7 +511,6 @@ section.experiences .container {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   position: relative;
-  text-shadow: 0 0 24px rgba(158, 201, 240, 0.35);
 }
 
 .skills-icons-row + .skills-subheader {
@@ -686,26 +623,32 @@ section.experiences .container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xl);
+  gap: var(--space-xl);
 }
 
 .education-card {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--blue-100);
-  transition: box-shadow var(--duration-normal) var(--ease-out), transform var(--duration-normal) var(--ease-out);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out),
+    background var(--duration-normal) var(--ease-out);
 }
 
 .education-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  border-color: rgba(158, 201, 240, 0.3);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .education-card-image {
   height: 200px;
   overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .education-img {
@@ -716,11 +659,11 @@ section.experiences .container {
 }
 
 .education-card:hover .education-img {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 .education-card-body {
-  padding: var(--space-2xl);
+  padding: var(--space-xl);
 }
 
 .education-header {
@@ -733,26 +676,34 @@ section.experiences .container {
 }
 
 .education-header h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--blue-900);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .education-location {
   font-size: 0.875rem;
-  color: var(--gray-500);
+  color: var(--blue-300);
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  background: rgba(107, 179, 232, 0.2);
+  border: 1px solid rgba(107, 179, 232, 0.3);
+  border-radius: 999px;
 }
 
 .education-focus {
   font-size: 1rem;
-  color: var(--blue-600);
-  font-weight: 500;
-  margin-bottom: var(--space-md);
+  font-weight: 600;
+  color: var(--blue-300);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.03em;
 }
 
 .education-desc {
   font-size: 0.9375rem;
-  color: var(--gray-700);
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.65;
 }
 
@@ -772,11 +723,9 @@ section.experiences .container {
   position: relative;
   padding: var(--space-lg);
   border-radius: var(--radius-xl);
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform var(--duration-normal) var(--ease-out),
     box-shadow var(--duration-normal) var(--ease-out),
     border-color var(--duration-normal) var(--ease-out),
@@ -786,9 +735,9 @@ section.experiences .container {
 
 .experience-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(107, 179, 232, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  border-color: rgba(158, 201, 240, 0.25);
-  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  border-color: rgba(158, 201, 240, 0.3);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .experience-card-logo {
@@ -885,13 +834,11 @@ section.experiences .container {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform var(--duration-normal) var(--ease-out),
     box-shadow var(--duration-normal) var(--ease-out),
     border-color var(--duration-normal) var(--ease-out),
@@ -900,9 +847,9 @@ section.experiences .container {
 
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(107, 179, 232, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  border-color: rgba(158, 201, 240, 0.25);
-  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+  border-color: rgba(158, 201, 240, 0.3);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .project-card-image {
@@ -1037,7 +984,6 @@ section.experiences .container {
     padding: var(--space-xl);
     gap: var(--space-md);
     background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--gray-200);
     box-shadow: var(--shadow-lg);
     transform: translateY(-100%);
