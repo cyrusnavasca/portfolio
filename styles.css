@@ -329,6 +329,7 @@ body {
 .hero-carousel-track {
   position: relative;
   width: 100%;
+  height: 500px;
 }
 
 .hero-slide {
@@ -392,7 +393,12 @@ body {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: var(--space-sm);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+  margin-top: 0;
+  z-index: 3;
 }
 
 .hero-carousel-dot {
@@ -455,6 +461,16 @@ body {
 .hero-subtitle strong {
   color: var(--white);
   font-weight: 700;
+}
+
+.hero-contact-link {
+  color: var(--blue-300);
+  text-decoration: none;
+}
+
+.hero-contact-link:hover {
+  color: var(--white);
+  text-decoration: underline;
 }
 
 .hero-actions {
@@ -972,6 +988,7 @@ section.experiences .container {
   font-size: 0.9375rem;
   color: rgba(255, 255, 255, 0.88);
   line-height: 1.65;
+  margin-top: var(--space-lg);
 }
 
 /* ----- Projects ----- */
@@ -1264,6 +1281,10 @@ section.experiences .container {
   .hero-photo-wrap {
     height: 400px;
     max-width: 320px;
+  }
+
+  .hero-carousel-track {
+    height: 400px;
   }
 
   .education-card-image {
