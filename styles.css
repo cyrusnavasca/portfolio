@@ -1318,6 +1318,11 @@ section.experiences .container {
   .contact-form .form-row {
     grid-template-columns: 1fr;
   }
+
+  .skills-icons-row {
+    flex-wrap: wrap;
+    row-gap: 1.25rem;
+  }
 }
 
 @media (max-width: 480px) {
