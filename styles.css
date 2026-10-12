@@ -572,6 +572,16 @@ body {
   box-shadow: 0 8px 20px -4px rgba(30, 90, 142, 0.4);
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm, 0.75rem);
+}
+
+.project-links .btn-visit {
+  margin-top: var(--space-md);
+}
+
 .btn-visit {
   align-self: flex-start;
   margin-top: var(--space-md);
@@ -993,11 +1003,17 @@ section.experiences .container {
 
 /* ----- Projects ----- */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-xl);
   max-width: 64rem;
   margin: 0 auto;
+}
+
+.projects-grid .project-card {
+  flex: 1 1 18rem;
+  max-width: 20rem;
 }
 
 .project-card {
@@ -1311,8 +1327,9 @@ section.experiences .container {
     align-items: flex-start;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .projects-grid .project-card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   .contact-form .form-row {
